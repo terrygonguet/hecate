@@ -1,0 +1,35 @@
+{
+  "name": "hecate",
+  "version": "1.0.0",
+  "description": "A game as a WebExtension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrygonguet/hecate.git"
+  },
+  "keywords": [
+    "webextension",
+    "game"
+  ],
+  "author": "T Gonguet",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/terrygonguet/hecate/issues"
+  },
+  "homepage": "https://github.com/terrygonguet/hecate#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
