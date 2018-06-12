@@ -23,6 +23,7 @@
   "homepage": "https://github.com/terrygonguet/hecate#readme",
   "devDependencies": {
     "css-loader": "^0.28.11",
+    "hoek": "^4.2.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
