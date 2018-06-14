@@ -5,8 +5,47 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "flow": "flow"
   },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": "> 1%, last 2 versions, Firefox ESR, not dead"
+          }
+        }
+      ],
+      "flow"
+    ],
+    "ignore": [
+      "node_modules"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "plugin:flowtype/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "webextensions": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "settings": {
+      "flowtype": {
+        "onlyFilesWithFlowAnnotation": true
+      }
+    }
+  },
+  "eslintIgnore": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/terrygonguet/hecate.git"
@@ -22,7 +61,20 @@
   },
   "homepage": "https://github.com/terrygonguet/hecate#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.49.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "flow-bin": "^0.74.0",
     "hoek": "^4.2.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
@@ -31,6 +83,7 @@
     "webpack-cli": "^3.0.3"
   },
   "dependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.10",
+    "mongodb": "^3.0.10"
   }
 }

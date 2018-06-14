@@ -14,7 +14,7 @@
     },
     "background": {
         "scripts": [
-          "lib/browser-polyfill.js",
+          "lib/browser-polyfill.min.js",
           "background/background.js"
         ]
     }
